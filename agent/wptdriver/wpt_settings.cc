@@ -372,9 +372,6 @@ bool BrowserSettings::Load(const TCHAR * browser, const TCHAR * iniFile,
   _wpt_directory = buff;
   _wpt_directory.Trim(_T("\\"));
 
-  // Delete an artifact from a bad agent update
-  DeleteFile(_wpt_directory + CString(_T("\\templates\\Firefox\\extensions\\wptdriver@webpagetest.org.xpi")));
-
   GetStandardDirectories();
 
   // create a profile directory for the given browser
